@@ -1,0 +1,18 @@
+First, I put all the XML and PNG files in the same folder called 'data'.
+
+Then, I wrote a Python script to process each XML and PNG pair.
+
+The script first opens the XML file and parses it using the ElementTree library. It then checks if the node is a leaf node (i.e., an object) and extracts the bounding box coordinates for each object in the image.
+
+Next, it opens the corresponding PNG image and uses the Pillow library to draw rectangles around the objects based on the coordinates extracted from the XML file.
+
+Finally, it saves the annotated image in the 'output' folder.
+
+I decided to create a new folder called 'output' instead of storing the outputs in the 'data' folder because I think it's good practice to not mix the input and output files.
+
+Also, I added a try-except block to handle any errors that may occur during the execution of the script.
+
+I used the following libraries:
+- ElementTree
+- Pillow
+- os
